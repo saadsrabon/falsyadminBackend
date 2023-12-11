@@ -5,7 +5,7 @@ app.use(express.json());
 
 
 const cors = require('cors')
-const port = 5000
+const port =process.env.port || 5000
 app.use(cors())
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const uri=`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}}@cluster0.btoo0iq.mongodb.net/?retryWrites=true&w=majority`;
