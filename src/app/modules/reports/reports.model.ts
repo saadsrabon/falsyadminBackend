@@ -28,10 +28,7 @@ const reportsSchema = new Schema<IReport>({
         type:Schema.Types.ObjectId,
         ref:'Comment'
     }],
-    creatorName:{
-        type:String,
-        required:true
-    },
+
     accusedName:{
         type:String,
         required:true

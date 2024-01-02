@@ -10,7 +10,16 @@ const userSchema = new Schema<IUser>({
     password:{
         type:String,
         required:true
-    }
+    },
+    creatorName:{
+        type:String,
+        required:true
+    },
+    profession:{
+        type:String,
+        required:true
+    
+    },
 }, {
     timestamps: true
 })

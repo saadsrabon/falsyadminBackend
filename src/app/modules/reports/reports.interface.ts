@@ -7,7 +7,7 @@ export type IReport = {
     institute: string,
     location: string,
     comments:[object],
-    creatorName: string,
+
     accusedName: string,
 };    
 
