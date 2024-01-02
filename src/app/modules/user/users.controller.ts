@@ -10,6 +10,15 @@ const createUserController = catchAsync(async (req: Request, res: Response) => {
     });
 });
 
+const loginUserController = catchAsync(async (req: Request, res: Response) => {
+    const user = await userService.loginUser(req.body);
+    res.status(201).json({
+        success: true,
+        data: user,
+    });
+});
+
 export const userController = {
-    createUserController
+    createUserController,
+    loginUserController
 }
