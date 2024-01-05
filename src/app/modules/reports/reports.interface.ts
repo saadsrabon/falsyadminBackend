@@ -7,7 +7,14 @@ export type IReport = {
     institute: string,
     location: string,
     comments:[object],
-
+    upvotes: [{
+        vote: number,
+        userId: Types.ObjectId
+    }],
+    downvotes:[ {
+        vote: number,
+        userId: Types.ObjectId
+    }],
     accusedName: string,
 };    
 

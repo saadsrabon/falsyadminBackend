@@ -32,7 +32,27 @@ const reportsSchema = new Schema<IReport>({
     accusedName:{
         type:String,
         required:true
-    }
+    },
+    upvotes: [{
+        vote: {
+            type: Number,
+            default: 0
+        },
+        userId: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        }
+    } ],
+    downvotes: [{
+        vote: {
+            type: Number,
+            default: 0
+        },
+        userId: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        }
+    }]
 }, {
     timestamps: true
 })

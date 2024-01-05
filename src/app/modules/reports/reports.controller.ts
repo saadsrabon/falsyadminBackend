@@ -21,7 +21,18 @@ const getReports = catchAsync(async (req: Request, res: Response) => {
 
 })
 
+const upvote = catchAsync(async (req: Request, res: Response) => {
+    const { reportId } = req.params;
+    const { userId } = req.body;
+    const report = await reportService.addUpvote(userId, reportId);
+    res.status(201).json({
+        success: true,
+        data: report,
+    });
+})
+
 export const reportController = {
     createReport,
-    getReports
+    getReports,
+    upvote
 }
